@@ -1,9 +1,8 @@
 import React from 'react';
-import './FileZone.css';
-
+import {SynonymsComponent} from '../SynonymsComponent/SynonymsComponent'
+import './EditorComponent.css';
 
 export class EditorComponent extends React.Component {
-
      onHandleSelect = (e)=>{        
             const selectedText = window.getSelection ? 
                 window.getSelection().toString() :
@@ -12,14 +11,18 @@ export class EditorComponent extends React.Component {
                  '';
             this.props.handleSelectWord(selectedText);   
     }
+
+    
     render(){
+        const {synonyms, selectedText} = this.props;
 
         return(
-            <div id="file-zone">
-            <div id="file">
-                <div  className='editorContent' contentEditable={true} onSelect={this.onHandleSelect} >
-                </div>
+            <div id="editor-zone">
+            <div id="editor" contentEditable={true} onSelect={this.onHandleSelect}>
+               
             </div>
+            <SynonymsComponent synonyms={synonyms}  selectedText={selectedText}/>
+
             </div>
             
         )

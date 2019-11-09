@@ -1,11 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {useForceUpdate} from '../service/ForceUpdate'
 import './ControlPanel.css';
 
-
-function useForceUpdate(){
-    const [useLessValue, setUseLessValue] = useState(true);
-    return () => setUseLessValue(!useLessValue); 
-}
 
 
 
@@ -22,10 +18,11 @@ export function ToolbarComponent(props) {
         return(
             <div id="control-panel">
                 <div id="format-actions">
-                {buttons.map(button=>{
+                {buttons.map((button, index)=>{
                     console.log(button, document.queryCommandState(button.name))
                     return(
-                    <button 
+                    <button
+                        key={`${button.content}_${index}`}
                         className={document.queryCommandState(button.name) ? 'format-action activeButton' : 'format-action'}
                         onClick={()=>onClick(button.name)}
                         type="button"

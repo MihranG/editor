@@ -28,14 +28,6 @@ footer {
 
 }
 
-.toolBar {
-  height: 60px;
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-}
-
 .button{
   border: 1px solid black;
   border-radius: 3px;
@@ -48,24 +40,4 @@ footer {
 
 .activeButton{
   background-color: gray
-}
-
-.editorContent{
-  outline: none;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  font-size: 16px
-}
-
-.synonymwrapper{
-  width: 500px;
-  height: 300px;
-  overflow-y: scroll;
-  border: 1px solid blue;
-  border-radius: 3px;
-}
-
-synonymwrapper ul li {
-  list-style: none
 }

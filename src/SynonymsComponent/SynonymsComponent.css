@@ -1,0 +1,23 @@
+  
+  .synonymwrapper{
+    width: 500px;
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: none;
+    margin-bottom: 20px;
+  }
+  
+  .synonymwrapper button {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 2px;
+    margin: 2px;
+  }
+
+  .synonym_message{
+    font-size: 25px;
+    text-align: center;
+    vertical-align: center
+  }
