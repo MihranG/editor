@@ -23,13 +23,13 @@ function App() {
 
   return (
     <div className="App">
-                <header>
-                    <span>Simple Text Editor</span>
-                </header>
-                <main>
-                    <ToolbarComponent buttons={importedManipulations} onButtonClick={handleToolbarButtonClick}  />
-                    <EditorComponent synonyms={synonyms} handleSelectWord={handleSelection} selectedText={selectedText}/>
-                </main>
+        <header>
+            <span>Simple Text Editor</span>
+        </header>
+        <main>
+            <ToolbarComponent buttons={importedManipulations} onButtonClick={handleToolbarButtonClick}  />
+            <EditorComponent synonyms={synonyms} handleSelectWord={handleSelection} selectedText={selectedText}/>
+        </main>
     </div>
   );
 }
